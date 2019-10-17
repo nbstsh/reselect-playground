@@ -4,7 +4,10 @@ import {
 	IState,
 	IItem,
 	shopItemsSelector,
-	taxPercentSelector
+	taxPercentSelector,
+	subtotalSelector,
+	taxSelector,
+	totalSelector
 } from './tax.selector';
 
 const dummyItems: IItem[] = [
@@ -22,6 +25,9 @@ const state: IState = {
 const Basic = () => {
 	const shopItems = shopItemsSelector(state);
 	const taxPercent = taxPercentSelector(state);
+	const subtotal = subtotalSelector(state);
+	const tax = taxSelector(state);
+	const { total } = totalSelector(state);
 
 	return (
 		<Wrapper>
@@ -36,6 +42,20 @@ const Basic = () => {
 					);
 				})}
 			</ul>
+			<table>
+				<tr>
+					<td>subtotal</td>
+					<td>{subtotal}</td>
+				</tr>
+				<tr>
+					<td>tax</td>
+					<td>{tax}</td>
+				</tr>
+				<tr>
+					<td>total</td>
+					<td>{total}</td>
+				</tr>
+			</table>
 		</Wrapper>
 	);
 };
