@@ -1,7 +1,11 @@
 import { combineReducers } from 'redux';
-import todoReducer from './todo/todo.reducer';
+import todoReducer, { ITodoState } from './todo/todo.reducer';
 
-const rootReducer = combineReducers({
+export interface IAppState {
+	todo: ITodoState;
+}
+
+const rootReducer = combineReducers<IAppState>({
 	todo: todoReducer
 });
 

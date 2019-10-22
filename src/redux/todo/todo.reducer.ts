@@ -3,7 +3,7 @@ import { todos } from './todo.data';
 import { VisibilityFilter, IToDo } from './todo.types';
 import actions from './todo.actions';
 
-interface ITodoState {
+export interface ITodoState {
 	visibilityFilter: VisibilityFilter;
 	todos: IToDo[];
 }
