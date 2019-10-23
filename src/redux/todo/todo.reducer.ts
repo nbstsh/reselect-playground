@@ -10,7 +10,7 @@ export interface ITodoState {
 
 const INITIAL_TODO_STATE: ITodoState = {
 	visibilityFilter: VisibilityFilter.ShowAll,
-	todos: []
+	todos: todos
 };
 
 const todoReducer = reducerWithInitialState(INITIAL_TODO_STATE)

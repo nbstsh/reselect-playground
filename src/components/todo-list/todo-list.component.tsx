@@ -1,14 +1,9 @@
 import React from 'react';
 import Todo from '../todo/todo.component';
-
-interface ITodo {
-	id: number;
-	completed: boolean;
-	text: string;
-}
+import { IToDo } from '../../redux/todo/todo.types';
 
 interface ITodoList {
-	todos: ITodo[];
+	todos: IToDo[];
 	onTodoClick: (index: number) => void;
 }
 

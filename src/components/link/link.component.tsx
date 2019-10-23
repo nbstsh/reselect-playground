@@ -1,5 +1,4 @@
 import React from 'react';
-import { VisibilityFilter } from '../../redux/todo/todo.types';
 
 export interface ILinkProps {
 	active: boolean;
@@ -13,7 +12,7 @@ const Link: React.FC<ILinkProps> = ({ active, children, onClick }) => {
 
 	return (
 		<a
-			href=''
+			href='#'
 			onClick={e => {
 				e.preventDefault();
 				onClick();

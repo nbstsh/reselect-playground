@@ -1,6 +1,6 @@
 import { connect } from 'react-redux';
 import actions from '../../redux/todo/todo.actions';
-import Link, { ILinkProps } from '../../components/link/link.component';
+import Link from '../../components/link/link.component';
 import { IAppState } from '../../redux/root-reducer';
 import { Dispatch } from 'redux';
 import { Action } from 'typescript-fsa';
